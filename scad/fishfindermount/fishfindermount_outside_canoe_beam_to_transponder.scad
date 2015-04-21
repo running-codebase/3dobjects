@@ -8,9 +8,9 @@ rotate([90,0,0])difference() {
 	}
 	union() {
 		//Holes
-		//translate([70,-10,0])rotate([90,0,0])cylinder(h = 40, r = 4, center = tru	e);
-		translate([50,-10,-5.5])rotate([90,0,0])cylinder(h = 40, r = 2, center = true);		
-		translate([50,-10,5.5])rotate([90,0,0])cylinder(h = 40, r = 2, center = true);		
+		//translate([70,-10,0])rotate([90,0,0])cylinder(h = 40, r = 4, center = true);
+		translate([50,-10,-7.5])rotate([90,0,0])cylinder(h = 40, r = 2, center = true);		
+		translate([50,-10, 7.5])rotate([90,0,0])cylinder(h = 40, r = 2, center = true);		
 		translate([-70,-10,0])rotate([90,0,0])cylinder(h = 40, r = 4, center = true);	
 	} 
 }
