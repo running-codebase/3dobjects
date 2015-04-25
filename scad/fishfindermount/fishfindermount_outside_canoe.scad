@@ -1,13 +1,39 @@
 
-difference() {
-	union() {
-		cube ([140,10,20], center = true); //Base shape
-		translate([70,0,0])rotate([90,0,0])cylinder(h = 10, r = 10, center = true);	
-		translate([-70,0,0])rotate([90,0,0])cylinder(h = 10, r = 10, center = true);	
+rotate([-90,0,0])difference () {
+	union(){
+		cube ([110,50,16], center = true);
+		translate([0,15,18])cube ([20,20,40], center = true);
+		translate([0,0,18])cube ([8,50,40], center = true);
 	}
 	union() {
-		//Holes
-		translate([70,-10,0])rotate([90,0,0])cylinder(h = 40, r = 4, center = true);	
-		translate([-70,-10,0])rotate([90,0,0])cylinder(h = 40, r = 4, center = true);	
-	} 
+		translate([0,10,0])union() {
+			cube ([10,50,10], center = true);
+			translate([0,-20,0])rotate([90,0,0])cylinder(h = 40, r = 2, center = true);	
+		}
+		translate([-20,10,0])union() {
+			cube ([10,50,10], center = true);
+			translate([0,-20,0])rotate([90,0,0])cylinder(h = 40, r = 2, center = true);	
+		}
+		translate([-40,10,0])union() {
+			cube ([10,50,10], center = true);
+			translate([0,-20,0])rotate([90,0,0])cylinder(h = 40, r = 2, center = true);	
+		}
+		translate([20,10,0])union() {
+			cube ([10,50,10], center = true);
+			translate([0,-20,0])rotate([90,0,0])cylinder(h = 40, r = 2, center = true);	
+		}
+		translate([40,10,0])union() {
+			cube ([10,50,10], center = true);
+			translate([0,-20,0])rotate([90,0,0])cylinder(h = 40, r = 2, center = true);	
+		}
+
+		//top cylinder hole to hold pins
+			translate([0,21,0])rotate([0,90,0])cylinder(h = 150, r = 2, center = true);
+		// mount hole
+		translate([0,-10,22])rotate([0,90,0])cylinder(h = 150, r = 4, center = true);
+	}
 }
+
+
+
+
